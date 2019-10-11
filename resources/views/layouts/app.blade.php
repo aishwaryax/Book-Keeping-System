@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="{{('css/app.css')}}">
         <title>BFA</title>
     <body>
+    @extends('layouts.header')
         @yield('content')
-    </body>
+     @extends('layouts.footer')
+        </body>
 </html>
