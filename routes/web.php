@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', function () {
+    return view('pages.about');
+});
 Route::get('/','PagesController@index');
 Route::get('/about','PagesController@about');
 Route::get('/book-bank','PagesController@book_bank');
@@ -22,4 +25,6 @@ Route::get('/contact','PagesController@contact');
 Route::get('/gallery','PagesController@gallery');
 Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
-
+Route::get('/header', function () {
+    return view('layouts.header');
+});
