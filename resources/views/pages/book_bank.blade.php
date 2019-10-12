@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.app')
 
 @section('content')
 <!-- Modal -->
@@ -296,8 +296,6 @@
 </section>
 <!-- /related course -->
 @endsection
-
-@extends('layouts.footer')
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
