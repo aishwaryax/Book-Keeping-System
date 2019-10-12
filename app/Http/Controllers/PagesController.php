@@ -40,4 +40,9 @@ class PagesController extends Controller
     public function book_library (){
         return  view('pages.book_library');
     }
+    
+    public function admin_ (){
+        return  view('admin_pages.admin');
+    }
+    
 }
