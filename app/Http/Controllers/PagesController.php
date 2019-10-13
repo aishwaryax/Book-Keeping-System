@@ -46,7 +46,7 @@ class PagesController extends Controller
     }
     public function add_staff ()
     {
-        return view('admin_pages.books-list');
+        return view('admin_pages.books-staff');
     }
     
 }

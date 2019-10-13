@@ -14,7 +14,15 @@
     <!-- CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-   
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('nav-item-active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('nav-item-active');
+    });
+</script> 
 </head>
 
 <body>
@@ -32,19 +40,23 @@
                     </a>
                 </div>
                 <ul class="nav">
+                    @if(Request::url()=='http://bfa.test/staff')
+                        <li class="nav-item-active" href="/staff">
+                    @else
+                    <li>
+                    @endif
+                        <a class="nav-link" href="/staff">
+                            <img width=20 height=20 src="admin_images/staff.png">
+                            <p>Staff</p>
+                        </a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/books">
                             <img width=20 height=20 src="admin_images/library.png"></img>
                             <p>Library</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="/add-books">
-                            <img width=20 height=20 src="admin_images/library.png"></img>
-                        </i>
-                            <p>Add books</p>
-                        </a>
-                    </li>
+                    
                     <li>
                         <a class="nav-link" href="/books-approve">
                             <img width=20 height=20 src="admin_images/book_rent.png"></img>

@@ -27,8 +27,12 @@ Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
 Route::get('/admin','PagesController@admin_');
 Route::get('/add-staff','PagesController@add_staff');
+Route::get('/add-staff/{{$staff->id}}','StaffController@show');
+
 
 Route::resource('books','BooksController');
+Route::resource('staff','StaffController');
+
 
 Auth::routes();
 
