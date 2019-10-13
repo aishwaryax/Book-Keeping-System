@@ -42,7 +42,11 @@ class PagesController extends Controller
     }
     
     public function admin_ (){
-        return  view('admin_pages.admin');
+        return  view('layouts.admin');
+    }
+    public function add_staff ()
+    {
+        return view('admin_pages.books-list');
     }
     
 }

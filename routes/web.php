@@ -26,7 +26,10 @@ Route::get('/gallery','PagesController@gallery');
 Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
 Route::get('/admin','PagesController@admin_');
+Route::get('/add-staff','PagesController@add_staff');
 
-Route::get('/header', function () {
-    return view('layouts.header');
-});
+Route::resource('books','BooksController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
