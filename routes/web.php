@@ -26,7 +26,7 @@ Route::get('/gallery','PagesController@gallery');
 Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
 Route::get('/add-staff','PagesController@add_staff');
-Route::get('/tp','PagesController@tp');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::resource('books','BooksController');
@@ -40,6 +40,6 @@ Route::get('/staff/{$id}','StaffController@show($id)');
 
 Auth::routes();
 
-Route::get('/', 'PagesController@index');
+Route::get('/admin', 'PagesController@admin');
 
 

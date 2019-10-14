@@ -63,10 +63,10 @@
             
                         @guest
                             <li class="list-inline-item mx-0">
-                                <a class="d-inline-block p-2 text-color" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="d-inline-block p-2 text-color" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
                                 </li>
                             @endif
                         @else
