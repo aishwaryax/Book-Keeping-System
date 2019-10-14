@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2329a24ebbddae0d989f382a39978c33",
+    "content-hash": "67783c47c96592cbffc21c6415b20d88",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -735,17 +735,85 @@
             "time": "2019-10-11T12:16:52+00:00"
         },
         {
-            "name": "league/flysystem",
-            "version": "1.0.55",
+            "name": "laravelcollective/html",
+            "version": "v6.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "33c91155537c6dc899eacdc54a13ac6303f156e6"
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "bcc317d21a7e04eebcc81c4109fa84feaab63590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/33c91155537c6dc899eacdc54a13ac6303f156e6",
-                "reference": "33c91155537c6dc899eacdc54a13ac6303f156e6",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/bcc317d21a7e04eebcc81c4109fa84feaab63590",
+                "reference": "bcc317d21a7e04eebcc81c4109fa84feaab63590",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0",
+                "illuminate/routing": "^6.0",
+                "illuminate/session": "^6.0",
+                "illuminate/support": "^6.0",
+                "illuminate/view": "^6.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "time": "2019-10-02T00:37:39+00:00"
+        },
+        {
+            "name": "league/flysystem",
+            "version": "1.0.56",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "90e3f83cb10ef6b058d70f95267030e7a6236518"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/90e3f83cb10ef6b058d70f95267030e7a6236518",
+                "reference": "90e3f83cb10ef6b058d70f95267030e7a6236518",
                 "shasum": ""
             },
             "require": {
@@ -816,7 +884,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-08-24T11:17:19+00:00"
+            "time": "2019-10-12T13:05:59+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3063,16 +3131,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "1.11.1",
+            "version": "1.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "dc56111b19e160236084dc6ab460e9c08912ecac"
+                "reference": "862cbc2dfffa1fa28b47822a116e5b2e03b421db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/dc56111b19e160236084dc6ab460e9c08912ecac",
-                "reference": "dc56111b19e160236084dc6ab460e9c08912ecac",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/862cbc2dfffa1fa28b47822a116e5b2e03b421db",
+                "reference": "862cbc2dfffa1fa28b47822a116e5b2e03b421db",
                 "shasum": ""
             },
             "require": {
@@ -3130,7 +3198,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2019-10-08T07:36:31+00:00"
+            "time": "2019-10-13T10:42:06+00:00"
         },
         {
             "name": "facade/ignition-contracts",

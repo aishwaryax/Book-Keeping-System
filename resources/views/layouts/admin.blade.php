@@ -48,33 +48,33 @@
                     <li>
                     @endif
                         <a class="nav-link" href="/staff">
-                            <img width=20 height=20 src="admin_images/staff.png">
+                            <img width=20 height=20 src="/admin_images/staff.png">
                             <p>Staff</p>
                         </a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/books">
-                            <img width=20 height=20 src="admin_images/library.png"></img>
+                            <img width=20 height=20 src="/admin_images/library.png"></img>
                             <p>Library</p>
                         </a>
                     </li>
                     
                     <li>
                         <a class="nav-link" href="/books-approve">
-                            <img width=20 height=20 src="admin_images/book_rent.png"></img>
+                            <img width=20 height=20 src="/admin_images/book_rent.png"></img>
                             <p>Approve book rental</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="/books-approve">
-                            <img width=20 height=20 src="admin_images/book_issue.png"></img>
+                            <img width=20 height=20 src="/admin_images/book_issue.png"></img>
                             <p>Approve book issue</p>
                         </a>
                     </li>
 
                     <li class="nav-item active active-pro">
                         <a class="nav-link active" href="/add-staff">
-                            <img width=20 height=20 src="admin_images/staff.png"></img>
+                            <img width=20 height=20 src="/admin_images/staff.png"></img>
                             <p>Add Staff</p>
                         </a>
                     </li>

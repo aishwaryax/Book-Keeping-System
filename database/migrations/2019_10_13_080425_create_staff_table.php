@@ -17,7 +17,7 @@ class CreateStaffTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->bigInteger('contact');
-            $table->longText('address');
+            $table->text('address');
             $table->Integer('salary');
             $table->string('books_issued');
             $table->enum('role', ['Admin', 'Developer', 'Library staff']);

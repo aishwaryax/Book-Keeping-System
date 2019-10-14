@@ -31,6 +31,8 @@ Route::get('/tp','PagesController@tp');
 
 
 Route::resource('books','BooksController');
+Route::resource('staff','StaffController');
+
 
 //staff
 Route::get('/staff','StaffController@index');

@@ -52,7 +52,12 @@ class StaffController extends Controller
     {
         //
         $s=Staff::find($id);
-        return view ('admin_pages.staff')->with('s', $s);
+        /*$this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
+        ]);*/
+        return view ('admin_pages.staff-profile')->with('s', $s);
     }
 
     /**
