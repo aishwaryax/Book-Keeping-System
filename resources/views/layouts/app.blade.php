@@ -55,8 +55,8 @@
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/Bhavishya-Book-bank-library-289624451740839/?ref=br_rs" target="_blank"><i class="ti-facebook"></i></a></li>
             
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <li class="list-inline-item mx-0">
+                                <a class="d-inline-block p-2 text-color" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -86,7 +86,46 @@
       </div>
     </div>
   </div>
+  <div class="navigation w-100">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo"></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item @@home">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item @@about">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item @@gallery">
+              <a class="nav-link" href="/gallery">Gallery</a>
+            </li>
+            <li class="nav-item dropdown view">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Our Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/book-bank">Book Bank</a>
+                <a class="dropdown-item" href="/book-library">Book Library</a>
+                <a class="dropdown-item" href="counselling.html">Counselling</a>
+              </div>
+            </li>
+            <li class="nav-item @@contact">
+              <a class="nav-link" href="/contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  </header>
         @yield('content')
      @extends('layouts.footer')
         </body>
