@@ -53,6 +53,13 @@
           <a class="text-color mr-3" href="callto:+91 808748 5059"><strong>CALL</strong> +91 808748 5059</a>
           <ul class="list-inline d-inline">
             <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/Bhavishya-Book-bank-library-289624451740839/?ref=br_rs" target="_blank"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#" target="_blank"><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="/notice">Notice</a></li>
             
                         @guest
                             <li class="list-inline-item mx-0">
@@ -63,7 +70,7 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li class="list-inline-nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
