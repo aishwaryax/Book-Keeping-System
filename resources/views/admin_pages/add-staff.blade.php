@@ -44,6 +44,17 @@
                                             </div>
 
                                             <div class="row">
+                                            <div class="col-md-4 pl-1">
+                                                <div class="form-group">
+                                                    {{Form::label('password_text','Password')}}
+                                                    {{Form::password('password', ['class' => 'form-control'])}}
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            
+
+                                            <div class="row">
                                             <div class="col-md-12 px-5">
                                                 <div class="form-group">
                                                     {{Form::label('books_issued_text','Books issued')}}

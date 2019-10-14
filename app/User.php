@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Http\Controllers\Controller;
+
 
 class User extends Authenticatable
 {
@@ -16,8 +18,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        //'name', 'email', 'password','role_id',
+        'name', 'email', 'password','role',
+
     ];
+
+    const ADMIN_TYPE = 'admin';
+    const DEFAULT_TYPE = 'default';
+    /*public function isAdmin()    {        
+        return $this->type === self::ADMIN_TYPE;    
+    }*/
 
     /**
      * The attributes that should be hidden for arrays.

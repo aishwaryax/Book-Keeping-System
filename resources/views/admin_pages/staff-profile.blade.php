@@ -94,7 +94,7 @@
                                             <div class="col-md-6 px-5">
                                                 <div class="form-group">
                                                     {{Form::label('age_text','Age')}}
-                                                    {{Form::text('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
+                                                    {{Form::text('age', $s->age,['class'=>'form-control','placeholder'=>'Age . . .'])}}
                                                 </div>
                                             </div>
                                             </div>

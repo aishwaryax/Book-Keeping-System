@@ -24,6 +24,7 @@ class CreateStaffTable extends Migration
             $table->Integer('age');
             $table->string('aadhar_card');
             $table->string('email');
+            $table->string('password');
             $table->enum('gender', ['male', 'female', 'others']);
             $table->timestamps();
         });
