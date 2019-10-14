@@ -27,7 +27,7 @@ Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
 Route::get('/admin','PagesController@admin_');
 Route::get('/add-staff','PagesController@add_staff');
-Route::get('/tp','PagesController@tp');
+Route::get('/admin','PagesController@admin');
 
 
 Route::resource('books','BooksController');
@@ -41,4 +41,17 @@ Route::get('/staff/{$id}','StaffController@show($id)');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
+{
+Route::match(['get', 'post'], '/admin', 'PagesController@admin_');
+Route::match(['get', 'post'], '/add-staff', 'PagesController@admin_');
+Route::match(['get', 'post'], '/staff', 'PagesController@admin_');
+Route::match(['get', 'post'], '/staff/{$id}', 'PagesController@admin_');
+
+});*/
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+
+

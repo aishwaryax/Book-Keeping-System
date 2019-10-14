@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PagesController extends Controller
 {
     //
@@ -41,16 +42,14 @@ class PagesController extends Controller
         return  view('pages.book_library');
     }
     
-    public function admin_ (){
+    public function admin (){
+
         return  view('layouts.admin');
     }
     public function add_staff ()
     {
         return view('admin_pages.add-staff');
     }
-    public function tp ()
-    {
-        return view('admin_pages.staff');
-    }
+    
     
 }
