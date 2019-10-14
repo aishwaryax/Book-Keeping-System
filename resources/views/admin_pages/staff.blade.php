@@ -15,19 +15,19 @@
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     <label>Name</label>
-                                                    <input type="text" class="form-control" value={{$s->name}}>
+                                                    <input type="text" class="form-control" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 px-1">
                                                 <div class="form-group">
                                                     <label>Staff ID</label>
-                                                    <input type="text" class="form-control" value={{$s->id}}>
+                                                    <input type="text" class="form-control" value="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" value={{$s->email}}>
+                                                    <input type="email" class="form-control" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -35,7 +35,7 @@
                                             <div class="col-md-12 pr-1">
                                                 <div class="form-group">
                                                     <label>Name</label>
-                                                    <input type="text" class="form-control" value={{$s->name}}>
+                                                    <input type="text" class="form-control" value="">
                                                 </div>
                                             </div>
                                             
@@ -44,7 +44,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Address</label>
-                                                    <input type="largetext" class="form-control" value={{$s->address}}>
+                                                    <input type="text" class="form-control" placeholder="Home Address" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -88,9 +88,9 @@
 
                                                 <select class="selectpicker " data-style="select-with-transition" title="Select role" data-size="7" value="role">
                                                     <option disabled>Select role</option>
-                                                    <option value="Developer" {{ ( $s->role == "Developer") ? 'selected' : '' }}>Developer</option>
-                                                    <option value="Admin"  {{ ( $s->role == "Admin") ? 'selected' : '' }}>Admin</option>
-                                                    <option value="Library staff" {{ ( $s->role == "Library staff") ? 'selected' : '' }}>Library staff</option>
+                                                    <option value="Developer" >Developer</option>
+                                                    <option value="Admin" >Admin</option>
+                                                    <option value="Library staff" >Library staff</option>
 
                                                 </select>
                                             </div>
@@ -101,14 +101,14 @@
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
                                                     <label>Aadhar Card Number</label>
-                                                    <input type="text" class="form-control" value={{$s->aadhar_card}}>
+                                                    <input type="text" class="form-control" value="">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-md-6 pl-1">
                                                 <div class="form-group">
                                                     <label>Age</label>
-                                                    <input type="number" class="form-control" value={{$s->age}}>
+                                                    <input type="number" class="form-control" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Books Issued</label>
-                                                    <textarea rows="4" cols="80" class="form-control" value={{$s->books_issued}}>{{$s->books_issued}}</textarea>
+                                                    <textarea rows="4" cols="80" class="form-control" value=""></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -135,10 +135,9 @@
                                     <div class="author">
                                         <a href="#">
                                             <img class="avatar border-gray" src="img/faces/face-3.jpg" alt="...">
-                                            <h5 class="title">Mike Andrew</h5>
+                                            <h5 class="title"></h5>
                                         </a>
                                         <p class="description">
-                                            michael24
                                         </p>
                                     </div>
                                     

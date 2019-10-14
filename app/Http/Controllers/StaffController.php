@@ -52,7 +52,7 @@ class StaffController extends Controller
     {
         //
         $s=Staff::find($id);
-        return view ('admin_pages.staff-profile')->with('s', $s);
+        return view ('admin_pages.staff')->with('s', $s);
     }
 
     /**
