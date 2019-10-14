@@ -37,9 +37,42 @@ class StaffController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'name' => 'required',
+            'contact' => 'required',
+            'address' => 'required',
+            'salary' => 'required',
+            'books_issued' => 'required',
+            'role' => 'required',
+            'age' => 'required',
+            'email' => 'required',
+            'gender' => 'required'
+            //'cover_image' => 'image|nullable|max:1999'
+        ]);
+
+        //input
+
+        $s = new Staff;
+        $s->name = $request->input('name');
+        $s->contact = $request->input('contact');
+        $s->address = $request->input('address');
+        $s->salary = $request->input('salary');
+        $s->books_issued = $request->input('books_issued');
+        $s->role = $request->input('role');
+        $s->age = $request->input('age');
+        $s->aadhar_card = $request->input('aadhar_card');
+        $s->email = $request->input('email');
+        $s->gender = $request->input('gender');
+        //$s->user_id = auth()->user()->id;
+        //$s->cover_image = $fileNameToStore;
+        $s->save();
+
+        return redirect('/staff')->with('success', 'Staff details added');
+
     }
 
     /**
@@ -52,11 +85,9 @@ class StaffController extends Controller
     {
         //
         $s=Staff::find($id);
-        /*$this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
-        ]);*/
+        
+
+        
         return view ('admin_pages.staff-profile')->with('s', $s);
     }
 

@@ -102,7 +102,10 @@
                 </div>
             </nav>
             <!-- End Navbar -->
+            <div class="container">
+            @include('inc.messages')
                     @yield('content')
+            </div>
 
             <footer class="footer">
                 <div class="container-fluid">

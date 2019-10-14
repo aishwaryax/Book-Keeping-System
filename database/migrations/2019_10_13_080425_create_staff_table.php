@@ -21,7 +21,6 @@ class CreateStaffTable extends Migration
             $table->Integer('salary');
             $table->string('books_issued');
             $table->enum('role', ['Admin', 'Developer', 'Library staff']);
-            $table->date('dob');
             $table->Integer('age');
             $table->string('aadhar_card');
             $table->string('email');

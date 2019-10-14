@@ -10,7 +10,7 @@
                                     <h4 class="card-title">Add Details</h4>
                                 </div>
                                 <div class="card-body">
-    {!! Form::open(['action' => 'StaffController@index', 'method' => 'POST']) !!}
+    {!! Form::open(['action' => 'StaffController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
@@ -21,14 +21,33 @@
                                             </div>
                                             <div class="col-md-3 px-1">
                                                 <div class="form-group">
-                                                    {{Form::label('id','Staff ID')}}
-                                                    {{Form::text('id', '',['class'=>'form-control','placeholder'=>'Staff ID'])}}
+                                                    {{Form::label('contact_text','Contact No.')}}
+                                                    {{Form::text('contact', '',['class'=>'form-control','placeholder'=>'Phone Number'])}}
                                                 </div>
                                             </div>
+                                            
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     {{Form::label('email','Email ID')}}
                                                     {{Form::text('email', '',['class'=>'form-control','placeholder'=>'Email ID'])}}
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 px-5">
+                                                <div class="form-group">
+                                                    {{Form::label('salary_text','Salary')}}
+                                                    {{Form::Number('salary', "",['class'=>'form-control','placeholder'=>'Enter salary . . .'])}}
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <div class="row">
+                                            <div class="col-md-12 px-5">
+                                                <div class="form-group">
+                                                    {{Form::label('books_issued_text','Books issued')}}
+                                                    {{Form::textarea('books_issued', '',['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
                                                 </div>
                                             </div>
                                         </div>
@@ -70,7 +89,7 @@
                                             <div class="col-md-6 px-5">
                                                 <div class="form-group">
                                                     {{Form::label('aadhar_text','Aadhar')}}
-                                                    {{Form::text('aadhar_no', '',['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
+                                                    {{Form::text('aadhar_card', '',['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
                                                 </div>
                                             </div>
                                             
