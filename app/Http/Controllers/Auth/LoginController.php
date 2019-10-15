@@ -28,8 +28,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    
+      protected function authenticated(Request $request, $user)
+{
+    if ( $user->role=='admin' ) {
+        return redirect('/admin');
+    }
 
+    return redirect('/');
+}
     /**
      * Create a new controller instance.
      *

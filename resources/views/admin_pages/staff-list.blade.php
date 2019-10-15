@@ -30,11 +30,11 @@
                                         <tbody>
                                         @foreach($staff as $s)
                                             <tr> 
-                                            <td><a style="color: black" href="/staff/{{$s->id}}">{{$s->id}}</a></td>
-                                            <td><a style="color: black" href="/staff/{{$s->id}}">{{$s->name}}</a></td>
-                                            <td><a style="color: black" href="/staff/{{$s->id}}">{{$s->role}}</a></td>
-                                            <td><a style="color: black" href="/staff/{{$s->id}}">{{$s->email}}</a></td>
-                                            <td><a style="color: black" href="/staff/{{$s->id}}">{{$s->contact}}</a></td>
+                                            <td><a style="color: black" href="/staff/{{$s->id}}/edit">{{$s->id}}</a></td>
+                                            <td><a style="color: black" href="/staff/{{$s->id}}/edit">{{$s->name}}</a></td>
+                                            <td><a style="color: black" href="/staff/{{$s->id}}/edit">{{$s->role}}</a></td>
+                                            <td><a style="color: black" href="/staff/{{$s->id}}/edit">{{$s->email}}</a></td>
+                                            <td><a style="color: black" href="/staff/{{$s->id}}/edit">{{$s->contact}}</a></td>
                                          @endforeach
 
                                             
