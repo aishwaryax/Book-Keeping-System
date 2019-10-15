@@ -14,7 +14,7 @@
                                     <h4 class="card-title">Edit Profile</h4>
                                 </div>
                                 <div class="card-body">
-    {!! Form::open(['action' => [ 'StaffController@update', $s->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                                {!! Form::open(['action' => [ 'StaffController@update', $s->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
@@ -77,6 +77,7 @@
                                                     {{Form::label('others','Others',['class'=>'form-check-label'])}}
                                                     {{Form::radio('gender', 'others', ['class'=>'form-check-input'])}}                                                   
                                                 </div>
+                                                
                                         </div>
 
                                             <div class="col-md-6 px-5">
@@ -103,7 +104,6 @@
                                                     {{Form::text('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
                                                 </div>
                                             </div>
-                                            </div>
 
                                             
                                         </div>
@@ -128,7 +128,7 @@
                                 <div class="card-body">
                                     <div class="author">
                                         <a href="#">
-                                            <img class="avatar border-gray" src="../admin_images/user.png" alt="...">
+                                            <img class="avatar border-gray" src="../../admin_images/user.png" alt="...">
                                             <h5 class="title">{{$s->name}}</h5>
                                         </a>
                                         <p class="description">

@@ -100,6 +100,10 @@ class StaffController extends Controller
     public function edit($id)
     {
         //
+        $s=Staff::find($id);
+
+        return view ('admin_pages.staff-profile')->with('s', $s);
+
     }
 
     /**
