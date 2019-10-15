@@ -66,8 +66,6 @@ class StaffController extends Controller
         $s->age = $request->input('age');
         $s->aadhar_card = $request->input('aadhar_card');
         $s->email = $request->input('email');
-        $s->password = $request->input('password');
-
         $s->gender = $request->input('gender');
         //$s->user_id = auth()->user()->id;
         //$s->cover_image = $fileNameToStore;
@@ -102,11 +100,6 @@ class StaffController extends Controller
     public function edit($id)
     {
         //
-        $s=Staff::find($id);
-        
-
-        
-        return view ('admin_pages.staff-profile')->with('s', $s);
     }
 
     /**
@@ -133,6 +126,7 @@ class StaffController extends Controller
         ]);
 
         //input
+        $s=Staff::find($id);
 
         $s->name = $request->input('name');
         $s->contact = $request->input('contact');
@@ -143,14 +137,13 @@ class StaffController extends Controller
         $s->age = $request->input('age');
         $s->aadhar_card = $request->input('aadhar_card');
         $s->email = $request->input('email');
-        $s->password = $request->input('password');
 
         $s->gender = $request->input('gender');
         //$s->user_id = auth()->user()->id;
         //$s->cover_image = $fileNameToStore;
         $s->save();
 
-        return redirect('/staff')->with('success', 'Staff details added');
+        return redirect('/staff')->with('success', 'Staff details updated');
     }
 
     /**
