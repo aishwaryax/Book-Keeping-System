@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('type')->default('default');
+            $table->integer('book_sub_id')->default(0);
+
 
         });
     }

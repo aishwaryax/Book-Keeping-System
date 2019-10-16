@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Books;
+use App\Book;
 
 class BooksController extends Controller
 {
@@ -15,7 +15,7 @@ class BooksController extends Controller
     public function index()
     {
         //
-        $books=Books::all();
+        $books=Book::all();
         return view('admin_pages.books-list')->with('books',$books);
     }
 
@@ -26,7 +26,8 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        //add books
+        return view ('books.create');
     }
 
     /**
@@ -38,6 +39,48 @@ class BooksController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'name' => 'required',
+            'book_id' => 'required',
+            'author' => 'required',
+            'price' => 'required',
+            'avail' => 'required',
+            'shelf_no' => 'required',
+            'copies' => 'required',
+            'lang' => 'required',
+            'genre'=>'required'
+            
+            //'cover_image' => 'image|nullable|max:1999'
+        ]);
+
+        //input
+
+
+        //for ($i=0; $i<$request->input('copies'); i++)
+        $s = new Book;
+        $s->title = $request->input('name');
+        $s->book_code = $request->input('book_id');
+        $s->author = $request->input('author');
+        $s->price = $request->input('price');
+        if ($request->input('avail')=='yes')
+            $pass=true;
+        else
+            $pass=false;
+        $s->availability = $pass;
+        $s->shelf_no = $request->input('shelf_no');
+        $s->copies = $request->input('copies');
+        $s->lang = $request->input('lang');
+        $s->body = $request->input('genre');
+
+        //@endfor
+
+
+        
+        //$s->user_id = auth()->user()->id;
+        //$s->cover_image = $fileNameToStore;
+        $s->save();
+
+        return redirect('/books')->with('success', 'Book details added');
     }
 
     /**

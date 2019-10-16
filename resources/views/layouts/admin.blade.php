@@ -47,7 +47,7 @@
                     @else
                     <li>
                     @endif
-                        <a class="nav-link" href="/staff">
+                        <a class="nav-link active" href="/staff">
                             <img width=20 height=20 src="/admin_images/staff.png">
                             <p>Staff</p>
                         </a>
@@ -73,7 +73,7 @@
                     </li>
 
                     <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="/add-staff">
+                        <a class="nav-link active" href="/staff/create">
                             <img width=20 height=20 src="/admin_images/staff.png"></img>
                             <p>Add Staff</p>
                         </a>
@@ -93,7 +93,7 @@
                            
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="/logout">
+                                <a class="nav-link" href="#pablo">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

@@ -4,7 +4,7 @@
     <!-- CSS Files -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/light-bootstrap-dashboard.css" rel="stylesheet" />
-
+        <link href="./../css/demo.css" rel="stylesheet" />
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -14,7 +14,7 @@
                                     <h4 class="card-title">Edit Profile</h4>
                                 </div>
                                 <div class="card-body">
-                                {!! Form::open(['action' => [ 'StaffController@update', $s->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                                    {!! Form::open(['action' => 'StaffController@index', 'method' => 'POST']) !!}
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
@@ -77,7 +77,6 @@
                                                     {{Form::label('others','Others',['class'=>'form-check-label'])}}
                                                     {{Form::radio('gender', 'others', ['class'=>'form-check-input'])}}                                                   
                                                 </div>
-                                                
                                         </div>
 
                                             <div class="col-md-6 px-5">
@@ -104,13 +103,13 @@
                                                     {{Form::text('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
                                                 </div>
                                             </div>
+                                            </div>
 
                                             
                                         </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 px-5">
-                                        {{Form::hidden('_method','PUT')}}
                                         {{Form::submit('Submit',['class'=>"btn btn-info btn-fill pull-right"])}}
                                         </div>
                                         </div>
@@ -128,7 +127,7 @@
                                 <div class="card-body">
                                     <div class="author">
                                         <a href="#">
-                                            <img class="avatar border-gray" src="../../admin_images/user.png" alt="...">
+                                            <img class="avatar border-gray" src="../admin_images/user.png" alt="...">
                                             <h5 class="title">{{$s->name}}</h5>
                                         </a>
                                         <p class="description">
@@ -156,5 +155,3 @@
             </div>
 
             @endsection
-
-            

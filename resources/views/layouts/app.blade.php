@@ -70,7 +70,7 @@
                                 </li>
                             @endif
                         @else
-                            <li class="list-inline-nav-item dropdown">
+                            <li class="list-inline-item mx-0">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>

@@ -29,6 +29,7 @@ class StaffController extends Controller
     public function create()
     {
         //
+        return view('admin_pages.add-staff');
     }
 
     /**

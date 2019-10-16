@@ -1,6 +1,13 @@
 @extends(' layouts.admin')
 @section('content')
 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/light-bootstrap-dashboard.css" rel="stylesheet" />
+        <link href="../css/demo.css" rel="stylesheet" />
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -28,14 +35,14 @@
                                             
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4 pl-1">
+                                            <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     {{Form::label('email','Email ID')}}
                                                     {{Form::text('email', '',['class'=>'form-control','placeholder'=>'Email ID'])}}
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-md-6 px-5">
+                                            <div class="col-md-3 px-1">
                                                 <div class="form-group">
                                                     {{Form::label('salary_text','Salary')}}
                                                     {{Form::Number('salary', "",['class'=>'form-control','placeholder'=>'Enter salary . . .'])}}
@@ -43,27 +50,9 @@
                                             </div>
                                             </div>
 
-                                            <div class="row">
-                                            <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    {{Form::label('password_text','Password')}}
-                                                    {{Form::password('password', ['class' => 'form-control'])}}
-                                                </div>
-                                            </div>
-                                            </div>
-
                                             
-
-                                            <div class="row">
-                                            <div class="col-md-12 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('books_issued_text','Books issued')}}
-                                                    {{Form::textarea('books_issued', '',['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-8 pr-1">
                                                 <div class="form-group">
                                                     {{Form::label('address','Address')}}
                                                     {{Form::text('address', '',['class'=>'form-control','placeholder'=>'Address . . .'])}}
@@ -71,12 +60,35 @@
                                             </div>
                                         </div>
 
-                                        
+                                        <div class="row">
+                                            <div class="col-md-5 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('aadhar_text','Aadhar')}}
+                                                    {{Form::text('aadhar_card', '',['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3 px-1">
+                                                <div class="form-group">
+                                                    {{Form::label('age_text','Age')}}
+                                                    {{Form::Number('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('books_issued_text','Books issued')}}
+                                                    {{Form::textarea('books_issued', '',['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
 
                                         <div class="row">
-                                        <div class="col-md-6 pr-1">
+                                        <div class="col-md-6 px-4">
                                                 <div class="form-group">
-                                                    <label>Gender</label>
+                                                    <label>GEN</label>
                                                     {{Form::label('male','Male',['class'=>'form-check-label'])}}
                                                     {{Form::radio('gender', 'female',[ 'class'=>'form-check-input'])}}
                                                     {{Form::label('female','Female',['class'=>'form-check-label'])}}
@@ -86,7 +98,7 @@
                                                 </div>
                                         </div>
 
-                                            <div class="col-md-6 px-5">
+                                            <div class="col-md-4 mr-1">
                                             
                                                     <div class="form-group">
                                                     {{Form::label('role_text','Role')}}
@@ -96,31 +108,8 @@
 
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-6 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('aadhar_text','Aadhar')}}
-                                                    {{Form::text('aadhar_card', '',['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-6 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('age_text','Age')}}
-                                                    {{Form::text('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
-                                                </div>
-                                            </div>
-                                            </div>
 
-                                            <div class="row">
-                                            <div class="col-md-12 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('books_issued_text','Books issued')}}
-                                                    {{Form::textarea('books_issued', '',['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-md-12 px-5">
                                         {{Form::submit('Submit',['class'=>"btn btn-info btn-fill pull-right"])}}
@@ -165,5 +154,3 @@
             </div>
 
             @endsection
-
-            

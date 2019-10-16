@@ -23,6 +23,7 @@ class CreateBooksTable extends Migration
             $table->float('price');
             $table->integer('shelf_no');
             $table->integer('copies');
+            $table->integer('count');
             $table->string('lang');
             $table->timestamps();
         });
