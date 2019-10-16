@@ -40,5 +40,7 @@ Route::get('/staff/{$id}','StaffController@show($id)');
 Auth::routes();
 
 Route::get('/admin', 'PagesController@admin');
+Route::get('/donate', 'PagesController@donate');
+
 
 

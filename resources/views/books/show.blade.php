@@ -28,13 +28,13 @@
                                         <tbody>
                                         @foreach($books as $b)
                                             <tr>
-                                            <td>{{$b->id}}</td>
-                                            <td>{{$b->book_code}}</td>
-                                            <td>{{$b->author}}</td>
-                                            <td>{{$b->title}}</td>
-                                            <td>{{$b->shelf_no}}</td>
-                                            <td>{{$b->copies}}</td>
-                                            <td>{{$b->lang}}</td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->id}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->book_code}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->author}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->title}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->shelf_no}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->copies}}</a></td>
+                                            <td><a style="color: black" href="/books/{{$b->id}}/edit">{{$b->lang}}</a></td>
                                          @endforeach
 
                                             

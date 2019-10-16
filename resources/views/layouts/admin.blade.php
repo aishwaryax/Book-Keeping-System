@@ -60,9 +60,15 @@
                     </li>
                     
                     <li>
-                        <a class="nav-link" href="/books-approve">
+                        <a class="nav-link" href="/books/create">
                             <img width=20 height=20 src="/admin_images/book_rent.png"></img>
-                            <p>Approve book rental</p>
+                            <p>Add books</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/books-approve">
+                            <img width=20 height=20 src="/admin_images/book_issue.png"></img>
+                            <p>Approve book issue</p>
                         </a>
                     </li>
                     <li>

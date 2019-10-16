@@ -16,7 +16,7 @@ class BooksController extends Controller
     {
         //
         $books=Book::all();
-        return view('admin_pages.books-list')->with('books',$books);
+        return view('books.show')->with('books',$books);
     }
 
     /**
@@ -103,6 +103,11 @@ class BooksController extends Controller
     public function edit($id)
     {
         //
+        $b=Book::find($id);
+        
+
+        
+        return view ('books.update')->with('b', $b);
     }
 
     /**

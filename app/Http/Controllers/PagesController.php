@@ -44,6 +44,10 @@ class PagesController extends Controller
     public function admin (){
         return  view('layouts.admin');
     }
+
+    public function donate (){
+        return  view('pages.donations');
+    }
     // public function add_staff ()
     // {
     //     return view('admin_pages.add-staff');

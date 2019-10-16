@@ -1,20 +1,21 @@
-@extends(' layouts.admin')
+@extends('layouts.admin')
 @section('content')
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/light-bootstrap-dashboard.css" rel="stylesheet" />
-        <link href="./../css/demo.css" rel="stylesheet" />
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Edit Profile</h4>
+                                    <h4 class="card-title">Add Details</h4>
                                 </div>
                                 <div class="card-body">
-                                    {!! Form::open(['action' => 'StaffController@index', 'method' => 'POST']) !!}
+    {!! Form::open(['action' => [ 'StaffController@update', $s->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
@@ -32,14 +33,14 @@
                                             
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4 pl-1">
+                                            <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     {{Form::label('email','Email ID')}}
                                                     {{Form::text('email', $s->email,['class'=>'form-control','placeholder'=>'Email ID'])}}
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-md-6 px-5">
+                                            <div class="col-md-3 px-1">
                                                 <div class="form-group">
                                                     {{Form::label('salary_text','Salary')}}
                                                     {{Form::text('salary', $s->salary,[' readonly' ,'class'=>'form-control','placeholder'=>'Enter salary . . .'])}}
@@ -48,14 +49,6 @@
                                             </div>
 
                                             <div class="row">
-                                            <div class="col-md-12 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('books_issued_text','Books issued')}}
-                                                    {{Form::textarea('books_issued', $s->books_issued,['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     {{Form::label('address','Address')}}
@@ -64,56 +57,82 @@
                                             </div>
                                         </div>
 
+                                        <div class="row">
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('password_text','Password')}}
+                                                    {{Form::input('password', 'pass', $s->password,['class'=>'form-control'])
+}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-5 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('aadhar_text','Aadhar')}}
+                                                    {{Form::text('aadhar_card', $s->aadhar_card,['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3 px-1">
+                                                <div class="form-group">
+                                                    {{Form::label('age_text','Age')}}
+                                                    {{Form::text('age', $s->age,['class'=>'form-control','placeholder'=>'Age . . .'])}}
+                                                </div>
+                                            </div>
+                                            </div>
+
+
+                                             <div class="row">
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('books_issued_text','Books issued')}}
+                                                    {{Form::textarea('books_issued', $s->books_issued,['rows'=>'4', 'cols'=>'60','class'=>'form-control','placeholder'=>'Books issued . . .'])}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                            
+                                        
+
                                         
 
                                         <div class="row">
-                                        <div class="col-md-6 pr-1">
+                                        <div class="col-md-6 px-4">
                                                 <div class="form-group">
-                                                    <label>Gender</label>
-                                                    {{Form::label('male','Male',['class'=>'form-check-label'])}}
+                                                    <label>Gen</label>
+                                                    {{Form::label('male','M',['class'=>'form-check-label'])}}
                                                     {{Form::radio('gender', 'female',[ 'class'=>'form-check-input'])}}
-                                                    {{Form::label('female','Female',['class'=>'form-check-label'])}}
+                                                    {{Form::label('female','F',['class'=>'form-check-label'])}}
                                                     {{Form::radio('gender', 'others', ['class'=>'form-check-input'])}}
                                                     {{Form::label('others','Others',['class'=>'form-check-label'])}}
-                                                    {{Form::radio('gender', 'others', ['class'=>'form-check-input'])}}                                                   
+                                                    {{Form::radio('gender', 'others', ['class'=>'form-check-input'])}}                                                     
                                                 </div>
                                         </div>
 
-                                            <div class="col-md-6 px-5">
+                                            <div class="col-md-4 mr-1">
                                             
                                                     <div class="form-group">
                                                     {{Form::label('role_text','Role')}}
-                                                    {{Form::select('role', ['Developer' => 'Developer', 'Admin' => 'Admin', 'Library Staff' => 'Library Staff'])}}                                                
-                                            </div>
+                                                    {{Form::select('role', ['Developer' => 'Developer', 'Admin' => 'Admin', 'Library Staff' => 'Library Staff','class'=>'form-control'])}}
+                                                    </div>
 
 
                                         </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('aadhar_text','Aadhar')}}
-                                                    {{Form::text('aadhar_card', '',['class'=>'form-control','placeholder'=>'Aadhar Card Number . . .'])}}
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-6 px-5">
-                                                <div class="form-group">
-                                                    {{Form::label('age_text','Age')}}
-                                                    {{Form::text('age', '',['class'=>'form-control','placeholder'=>'Age . . .'])}}
-                                                </div>
-                                            </div>
-                                            </div>
-
-                                            
                                         </div>
-                                        </div>
+
+                                        
+
+                                           
                                         <div class="row">
                                             <div class="col-md-12 px-5">
+
+                                                                                    {{Form::hidden('_method','PUT')}}
+
                                         {{Form::submit('Submit',['class'=>"btn btn-info btn-fill pull-right"])}}
                                         </div>
                                         </div>
-
     
                                     {!! Form::close() !!}
                                 </div>
@@ -127,12 +146,9 @@
                                 <div class="card-body">
                                     <div class="author">
                                         <a href="#">
-                                            <img class="avatar border-gray" src="../admin_images/user.png" alt="...">
-                                            <h5 class="title">{{$s->name}}</h5>
+                                            <img class="avatar border-gray" src="../../admin_images/user.png" alt="...">
                                         </a>
-                                        <p class="description">
-                                            {{$s->email}}
-                                        </p>
+                                        
                                     </div>
                                     
                                 </div>

@@ -50,15 +50,27 @@
                                             </div>
                                             </div>
 
+                                             <div class="row">
+                                            
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    {{Form::label('password_text','Password')}}
+                                                    {{Form::password('password', ['class' => 'form-control'])}}
+                                                </div>
+                                            </div>
+                                        </div>
+
                                             
                                         <div class="row">
-                                            <div class="col-md-8 pr-1">
+                                            <div class="col-md-12">
                                                 <div class="form-group">
                                                     {{Form::label('address','Address')}}
                                                     {{Form::text('address', '',['class'=>'form-control','placeholder'=>'Address . . .'])}}
                                                 </div>
                                             </div>
                                         </div>
+
+                                       
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
