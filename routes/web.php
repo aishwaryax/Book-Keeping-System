@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/tp', function () {
+    return view('admin_pages.staff');
 });
 Route::get('/about', function () {
     return view('pages.about');
@@ -25,6 +25,24 @@ Route::get('/contact','PagesController@contact');
 Route::get('/gallery','PagesController@gallery');
 Route::get('/notice-single','PagesController@notice_single');
 Route::get('/notice','PagesController@notice');
-Route::get('/header', function () {
-    return view('layouts.header');
-});
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+Route::resource('books','BooksController');
+Route::resource('staff','StaffController');
+Route::resource('donor','DonorsController');
+
+
+
+//staff
+Route::get('/staff','StaffController@index');
+Route::get('/staff/{$id}','StaffController@show($id)');
+
+
+Auth::routes();
+
+Route::get('/admin', 'PagesController@admin');
+Route::get('/donate', 'DonorsController@donate');
+
+
+
