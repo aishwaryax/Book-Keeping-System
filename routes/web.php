@@ -30,6 +30,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::resource('books','BooksController');
 Route::resource('staff','StaffController');
+Route::resource('donor','DonorsController');
+
 
 
 //staff
@@ -40,7 +42,7 @@ Route::get('/staff/{$id}','StaffController@show($id)');
 Auth::routes();
 
 Route::get('/admin', 'PagesController@admin');
-Route::get('/donate', 'PagesController@donate');
+Route::get('/donate', 'DonorsController@donate');
 
 
 

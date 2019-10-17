@@ -72,9 +72,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="/books-approve">
+                        <a class="nav-link" href="/donor">
                             <img width=20 height=20 src="/admin_images/book_issue.png"></img>
-                            <p>Approve book issue</p>
+                            <p>View Donations</p>
                         </a>
                     </li>
 
@@ -99,7 +99,7 @@
                            
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="/logout">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
